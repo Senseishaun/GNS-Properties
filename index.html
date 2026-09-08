@@ -287,20 +287,22 @@
         const carouselInner = document.getElementById('carousel-inner');
         const totalImages = 56;
         
-        // 1. Dynamically generate the 56 image slides
+        // Dynamically generate the 56 image slides
         for (let i = 1; i <= totalImages; i++) {
             const slide = document.createElement('div');
             slide.className = 'carousel-slide';
             if (i === 1) slide.classList.add('active'); // Make first image visible
             
             // Looking in the same folder directly
-            slide.innerHTML = `<img src="${i}.jpeg" >`;
-            carouselInner.appendChild(slide);
+           // slide.innerHTML = `<img src="${i}.jpeg" >`;
+         //   carouselInner.appendChild(slide);
+
+            slide.innerHTML = '<img src="GNS PROPERTIES/${i}.jpeg">';
         }
 
 
 
-        // 3. Carousel logic
+        // Carousel logic
         let slideIndex = 0;
         let slides = document.querySelectorAll(".carousel-slide");
         const counterDisplay = document.getElementById("slide-counter");
